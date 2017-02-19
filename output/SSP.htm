@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\output\SSP.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\output\SSP.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Feb 19 21:43:53 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Feb 19 22:54:43 2017
 <BR><P>
 <H3>Maximum Stack Usage =        112 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -396,11 +396,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_GetPCLKSEL
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
 </UL>
 
-<P><STRONG><a name="[6f]"></a>CLKPWR_ConfigPPWR</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, lpc17xx_clkpwr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_DeInit
+<P><STRONG><a name="[6e]"></a>CLKPWR_ConfigPPWR</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, lpc17xx_clkpwr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_DeInit
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_Init
 </UL>
 
@@ -412,7 +412,7 @@ Global Symbols
 
 <P><STRONG><a name="[a5]"></a>CLKPWR_DeepPowerDown</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lpc17xx_clkpwr.o(.text), UNUSED)
 
-<P><STRONG><a name="[6e]"></a>check_failed</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lpc17xx_libcfg_default.o(.text))
+<P><STRONG><a name="[6d]"></a>check_failed</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lpc17xx_libcfg_default.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_DMACmd
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ClearIntPending
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetIntStatus
@@ -420,12 +420,12 @@ Global Symbols
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetRawIntStatus
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_IntConfig
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetStatus
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReceiveData
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_SlaveOutputCmd
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_LoopBackCmd
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetDataSize
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_DeInit
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReceiveData
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_SlaveOutputCmd
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_LoopBackCmd
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetDataSize
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_DeInit
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_Init
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_Cmd
 </UL>
@@ -446,7 +446,7 @@ Global Symbols
 <P><STRONG><a name="[d]"></a>SysTick_Handler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, main.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
-<P><STRONG><a name="[50]"></a>_delayus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[4f]"></a>_delayus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
 </UL>
 
@@ -463,18 +463,17 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4e]"></a>send</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = send &rArr; GPIO_SetValue
+<P><STRONG><a name="[4e]"></a>send</STRONG> (Thumb, 80 bytes, Stack size 8 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = send &rArr; GPIO_SetValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_SendData
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetValue
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetValue
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearValue
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delayus
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_delayus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3d]"></a>main</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[3d]"></a>main</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = main &rArr; ssp_entry &rArr; SSP_Init &rArr; setSSPclock &rArr; CLKPWR_GetPCLK
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
@@ -486,18 +485,18 @@ Global Symbols
 <P><STRONG><a name="[4a]"></a>GPIO_SetDir</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GPIO_SetDir
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetDir
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetDir
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
 
 <P><STRONG><a name="[4c]"></a>GPIO_SetValue</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GPIO_SetValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetValue
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetValue
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
@@ -505,101 +504,101 @@ Global Symbols
 <P><STRONG><a name="[4b]"></a>GPIO_ClearValue</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GPIO_ClearValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ClearValue
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ClearValue
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
 
-<P><STRONG><a name="[52]"></a>GPIO_ReadValue</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
+<P><STRONG><a name="[51]"></a>GPIO_ReadValue</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ReadValue
-</UL>
-
-<P><STRONG><a name="[58]"></a>GPIO_IntCmd</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_IntCmd
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ReadValue
 </UL>
 
-<P><STRONG><a name="[5a]"></a>GPIO_GetIntStatus</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_GetIntStatus
+<P><STRONG><a name="[57]"></a>GPIO_IntCmd</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_IntCmd
 </UL>
 
-<P><STRONG><a name="[5c]"></a>GPIO_ClearInt</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ClearInt
+<P><STRONG><a name="[59]"></a>GPIO_GetIntStatus</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_GetIntStatus
 </UL>
 
-<P><STRONG><a name="[53]"></a>FIO_SetDir</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[5b]"></a>GPIO_ClearInt</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ClearInt
+</UL>
+
+<P><STRONG><a name="[52]"></a>FIO_SetDir</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetDir
 </UL>
 
-<P><STRONG><a name="[54]"></a>FIO_SetValue</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[53]"></a>FIO_SetValue</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetValue
 </UL>
 
-<P><STRONG><a name="[55]"></a>FIO_ClearValue</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[54]"></a>FIO_ClearValue</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearValue
 </UL>
 
-<P><STRONG><a name="[56]"></a>FIO_ReadValue</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadValue
+<P><STRONG><a name="[55]"></a>FIO_ReadValue</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadValue
 </UL>
 
-<P><STRONG><a name="[57]"></a>FIO_IntCmd</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IntCmd
+<P><STRONG><a name="[56]"></a>FIO_IntCmd</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_IntCmd
 </UL>
 
-<P><STRONG><a name="[59]"></a>FIO_GetIntStatus</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetIntStatus
+<P><STRONG><a name="[58]"></a>FIO_GetIntStatus</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetIntStatus
 </UL>
 
-<P><STRONG><a name="[5b]"></a>FIO_ClearInt</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearInt
+<P><STRONG><a name="[5a]"></a>FIO_ClearInt</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearInt
 </UL>
 
-<P><STRONG><a name="[5d]"></a>FIO_SetMask</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
+<P><STRONG><a name="[5c]"></a>FIO_SetMask</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_GetPointer
 </UL>
 
-<P><STRONG><a name="[5e]"></a>FIO_HalfWordSetDir</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
+<P><STRONG><a name="[5d]"></a>FIO_HalfWordSetDir</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
 </UL>
 
-<P><STRONG><a name="[60]"></a>FIO_HalfWordSetMask</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
+<P><STRONG><a name="[5f]"></a>FIO_HalfWordSetMask</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
 </UL>
 
-<P><STRONG><a name="[61]"></a>FIO_HalfWordSetValue</STRONG> (Thumb, 32 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
+<P><STRONG><a name="[60]"></a>FIO_HalfWordSetValue</STRONG> (Thumb, 32 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
 </UL>
 
-<P><STRONG><a name="[62]"></a>FIO_HalfWordClearValue</STRONG> (Thumb, 32 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
+<P><STRONG><a name="[61]"></a>FIO_HalfWordClearValue</STRONG> (Thumb, 32 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
 </UL>
 
-<P><STRONG><a name="[63]"></a>FIO_HalfWordReadValue</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
+<P><STRONG><a name="[62]"></a>FIO_HalfWordReadValue</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordGetPointer
 </UL>
 
-<P><STRONG><a name="[64]"></a>FIO_ByteSetDir</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
+<P><STRONG><a name="[63]"></a>FIO_ByteSetDir</STRONG> (Thumb, 50 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
 </UL>
 
-<P><STRONG><a name="[66]"></a>FIO_ByteSetMask</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
+<P><STRONG><a name="[65]"></a>FIO_ByteSetMask</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
 </UL>
 
-<P><STRONG><a name="[67]"></a>FIO_ByteSetValue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
+<P><STRONG><a name="[66]"></a>FIO_ByteSetValue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
 </UL>
 
-<P><STRONG><a name="[68]"></a>FIO_ByteClearValue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
+<P><STRONG><a name="[67]"></a>FIO_ByteClearValue</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
 </UL>
 
-<P><STRONG><a name="[69]"></a>FIO_ByteReadValue</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
+<P><STRONG><a name="[68]"></a>FIO_ByteReadValue</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteGetPointer
 </UL>
 
 <P><STRONG><a name="[a9]"></a>PINSEL_ConfigTraceFunc</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, lpc17xx_pinsel.o(.text), UNUSED)
@@ -609,9 +608,9 @@ Global Symbols
 <P><STRONG><a name="[48]"></a>PINSEL_ConfigPin</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, lpc17xx_pinsel.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = PINSEL_ConfigPin &rArr; set_ResistorMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_OpenDrainMode
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_ResistorMode
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PinFunc
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_OpenDrainMode
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_ResistorMode
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_PinFunc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
@@ -619,22 +618,22 @@ Global Symbols
 <P><STRONG><a name="[49]"></a>SSP_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SSP_Init &rArr; setSSPclock &rArr; CLKPWR_GetPCLK
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_ConfigPPWR
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSSPclock
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_ConfigPPWR
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
 
-<P><STRONG><a name="[70]"></a>SSP_DeInit</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_ConfigPPWR
+<P><STRONG><a name="[6f]"></a>SSP_DeInit</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_ConfigPPWR
 </UL>
 
-<P><STRONG><a name="[71]"></a>SSP_GetDataSize</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<P><STRONG><a name="[70]"></a>SSP_GetDataSize</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
 </UL>
 
 <P><STRONG><a name="[ab]"></a>SSP_ConfigStructInit</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, lpc17xx_ssp.o(.text), UNUSED)
@@ -642,62 +641,61 @@ Global Symbols
 <P><STRONG><a name="[4d]"></a>SSP_Cmd</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SSP_Cmd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ssp_entry
 </UL>
 
-<P><STRONG><a name="[72]"></a>SSP_LoopBackCmd</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<P><STRONG><a name="[71]"></a>SSP_LoopBackCmd</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
-<P><STRONG><a name="[73]"></a>SSP_SlaveOutputCmd</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<P><STRONG><a name="[72]"></a>SSP_SlaveOutputCmd</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
-<P><STRONG><a name="[4f]"></a>SSP_SendData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lpc17xx_ssp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
+<P><STRONG><a name="[75]"></a>SSP_SendData</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
 </UL>
 
-<P><STRONG><a name="[74]"></a>SSP_ReceiveData</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<P><STRONG><a name="[73]"></a>SSP_ReceiveData</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
-<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
+<BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReadWrite
 </UL>
 
-<P><STRONG><a name="[75]"></a>SSP_ReadWrite</STRONG> (Thumb, 592 bytes, Stack size 56 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReceiveData
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetDataSize
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_SendData
+<P><STRONG><a name="[74]"></a>SSP_ReadWrite</STRONG> (Thumb, 592 bytes, Stack size 56 bytes, lpc17xx_ssp.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_ReceiveData
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_SendData
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_GetDataSize
 </UL>
 
 <P><STRONG><a name="[76]"></a>SSP_GetStatus</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[77]"></a>SSP_IntConfig</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[78]"></a>SSP_GetRawIntStatus</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[79]"></a>SSP_GetRawIntStatusReg</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[7a]"></a>SSP_GetIntStatus</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[7b]"></a>SSP_ClearIntPending</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[7c]"></a>SSP_DMACmd</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, lpc17xx_ssp.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR><BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 </UL>
 
 <P><STRONG><a name="[46]"></a>__aeabi_uldivmod</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, lludivv7m.o(.text), UNUSED)
@@ -743,52 +741,52 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[51]"></a>GPIO_GetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetMask
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadValue
+<P><STRONG><a name="[50]"></a>GPIO_GetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_SetMask
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadValue
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetValue
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetDir
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ClearValue
 </UL>
 
-<P><STRONG><a name="[5f]"></a>FIO_HalfWordGetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordReadValue
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordClearValue
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetValue
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetMask
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetDir
+<P><STRONG><a name="[5e]"></a>FIO_HalfWordGetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordReadValue
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordClearValue
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetValue
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetMask
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_HalfWordSetDir
 </UL>
 
-<P><STRONG><a name="[65]"></a>FIO_ByteGetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteReadValue
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteClearValue
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetValue
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetMask
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetDir
+<P><STRONG><a name="[64]"></a>FIO_ByteGetPointer</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, lpc17xx_gpio.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteReadValue
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteClearValue
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetValue
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetMask
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FIO_ByteSetDir
 </UL>
 
-<P><STRONG><a name="[6a]"></a>set_PinFunc</STRONG> (Thumb, 60 bytes, Stack size 20 bytes, lpc17xx_pinsel.o(.text))
+<P><STRONG><a name="[69]"></a>set_PinFunc</STRONG> (Thumb, 60 bytes, Stack size 20 bytes, lpc17xx_pinsel.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = set_PinFunc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PINSEL_ConfigPin
 </UL>
 
-<P><STRONG><a name="[6b]"></a>set_ResistorMode</STRONG> (Thumb, 62 bytes, Stack size 20 bytes, lpc17xx_pinsel.o(.text))
+<P><STRONG><a name="[6a]"></a>set_ResistorMode</STRONG> (Thumb, 62 bytes, Stack size 20 bytes, lpc17xx_pinsel.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = set_ResistorMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PINSEL_ConfigPin
 </UL>
 
-<P><STRONG><a name="[6c]"></a>set_OpenDrainMode</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, lpc17xx_pinsel.o(.text))
+<P><STRONG><a name="[6b]"></a>set_OpenDrainMode</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, lpc17xx_pinsel.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = set_OpenDrainMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PINSEL_ConfigPin
 </UL>
 
-<P><STRONG><a name="[6d]"></a>setSSPclock</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, lpc17xx_ssp.o(.text))
+<P><STRONG><a name="[6c]"></a>setSSPclock</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, lpc17xx_ssp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setSSPclock &rArr; CLKPWR_GetPCLK
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_failed
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLKPWR_GetPCLK
 </UL>
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSP_Init

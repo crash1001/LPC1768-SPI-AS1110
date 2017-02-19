@@ -101,8 +101,12 @@ void ssp_entry(void)	{
 }
 
 void send(uint16_t data1)	{
-	uint16_t data= data1;
-	SSP_SendData(LPC_SSP0, data);
+	
+	
+	LPC_SSP0->DR = data1;
+	while(!(LPC_SSP0->SR & (1<<2)));
+	  
+//	SSP_SendData(LPC_SSP0, data);
 	_delayus(5);
 
 	//Turning on Latch
@@ -118,7 +122,7 @@ void send(uint16_t data1)	{
 
 
 int main(void)	{
-	uint16_t data;
+	uint16_t data=0x0101;
 	uint32_t i=0;
 	ssp_entry();
 	while(1<100)	{

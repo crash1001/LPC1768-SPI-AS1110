@@ -3,81 +3,26 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\Firmware\GITHUB\uv4\SSP.uvproj
+D:\Firmware\SPI-LPC1768-AS1110\uv4\SSP.uvproj
 Project File Date:  02/19/2017
 
 <h2>Output:</h2>
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
 compiling main.c...
-linking...
-Program Size: Code=5064 RO-data=236 RW-data=12 ZI-data=612  
-"..\output\SSP.axf" - 0 Error(s), 0 Warning(s).
-</pre>
-</body>
-</html>
-
-default.c...
+compiling lpc17xx_clkpwr.c...
+compiling lpc17xx_gpio.c...
+compiling lpc17xx_libcfg_default.c...
 compiling lpc17xx_pinsel.c...
 compiling lpc17xx_ssp.c...
 linking...
-Program Size: Code=5044 RO-data=236 RW-data=12 ZI-data=612  
+Program Size: Code=5072 RO-data=236 RW-data=12 ZI-data=612  
 "..\output\SSP.axf" - 0 Error(s), 0 Warning(s).
-_frmwrk.h(53): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_char)(LPC_UART_TypeDef *UARTx, uint8_t ch);
-..\lib\include\debug_frmwrk.h(53): error:  #20: identifier "uint8_t" is undefined
-  extern void (*_db_char)(LPC_UART_TypeDef *UARTx, uint8_t ch);
-..\lib\include\debug_frmwrk.h(54): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_dec)(LPC_UART_TypeDef *UARTx, uint8_t decn);
-..\lib\include\debug_frmwrk.h(54): error:  #20: identifier "uint8_t" is undefined
-  extern void (*_db_dec)(LPC_UART_TypeDef *UARTx, uint8_t decn);
-..\lib\include\debug_frmwrk.h(55): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_dec_16)(LPC_UART_TypeDef *UARTx, uint16_t decn);
-..\lib\include\debug_frmwrk.h(55): error:  #20: identifier "uint16_t" is undefined
-  extern void (*_db_dec_16)(LPC_UART_TypeDef *UARTx, uint16_t decn);
-..\lib\include\debug_frmwrk.h(56): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_dec_32)(LPC_UART_TypeDef *UARTx, uint32_t decn);
-..\lib\include\debug_frmwrk.h(56): error:  #20: identifier "uint32_t" is undefined
-  extern void (*_db_dec_32)(LPC_UART_TypeDef *UARTx, uint32_t decn);
-..\lib\include\debug_frmwrk.h(57): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_hex)(LPC_UART_TypeDef *UARTx, uint8_t hexn);
-..\lib\include\debug_frmwrk.h(57): error:  #20: identifier "uint8_t" is undefined
-  extern void (*_db_hex)(LPC_UART_TypeDef *UARTx, uint8_t hexn);
-..\lib\include\debug_frmwrk.h(58): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_hex_16)(LPC_UART_TypeDef *UARTx, uint16_t hexn);
-..\lib\include\debug_frmwrk.h(58): error:  #20: identifier "uint16_t" is undefined
-  extern void (*_db_hex_16)(LPC_UART_TypeDef *UARTx, uint16_t hexn);
-..\lib\include\debug_frmwrk.h(59): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern void (*_db_hex_32)(LPC_UART_TypeDef *UARTx, uint32_t hexn);
-..\lib\include\debug_frmwrk.h(59): error:  #20: identifier "uint32_t" is undefined
-  extern void (*_db_hex_32)(LPC_UART_TypeDef *UARTx, uint32_t hexn);
-..\lib\include\debug_frmwrk.h(60): error:  #79: expected a type specifier
-  extern uint8_t (*_db_get_char)(LPC_UART_TypeDef *UARTx);
-..\lib\include\debug_frmwrk.h(60): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  extern uint8_t (*_db_get_char)(LPC_UART_TypeDef *UARTx);
-..\lib\include\debug_frmwrk.h(60): error:  #90: function returning function is not allowed
-  extern uint8_t (*_db_get_char)(LPC_UART_TypeDef *UARTx);
-..\lib\include\debug_frmwrk.h(62): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPutChar (LPC_UART_TypeDef *UARTx, uint8_t ch);
-..\lib\include\debug_frmwrk.h(62): error:  #757: function "uint8_t" is not a type name
-  void UARTPutChar (LPC_UART_TypeDef *UARTx, uint8_t ch);
-..\lib\include\debug_frmwrk.h(63): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPuts(LPC_UART_TypeDef *UARTx, const void *str);
-..\lib\include\debug_frmwrk.h(64): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPuts_(LPC_UART_TypeDef *UARTx, const void *str);
-..\lib\include\debug_frmwrk.h(65): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPutDec(LPC_UART_TypeDef *UARTx, uint8_t decnum);
-..\lib\include\debug_frmwrk.h(65): error:  #757: function "uint8_t" is not a type name
-  void UARTPutDec(LPC_UART_TypeDef *UARTx, uint8_t decnum);
-..\lib\include\debug_frmwrk.h(66): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPutDec16(LPC_UART_TypeDef *UARTx, uint16_t decnum);
-..\lib\include\debug_frmwrk.h(66): error:  #20: identifier "uint16_t" is undefined
-  void UARTPutDec16(LPC_UART_TypeDef *UARTx, uint16_t decnum);
-..\lib\include\debug_frmwrk.h(67): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPutDec32(LPC_UART_TypeDef *UARTx, uint32_t decnum);
-..\lib\include\debug_frmwrk.h(67): error:  #20: identifier "uint32_t" is undefined
-  void UARTPutDec32(LPC_UART_TypeDef *UARTx, uint32_t decnum);
-..\lib\include\debug_frmwrk.h(68): error:  #20: identifier "LPC_UART_TypeDef" is undefined
-  void UARTPutHex (LPC_UART_TypeDef *UARTx, uint8_t hexnum);
-..\lib\source\debug_frmwrk.c: 0 warnings, 30 errors
-"..\output\SSP.axf" - 30 Error(s), 0 Warning(s).
-Target not created
+Load "..\\output\\SSP.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+</pre>
+</body>
+</html>
