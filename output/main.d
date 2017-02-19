@@ -1,0 +1,12 @@
+..\output\main.o: ..\src\main.c
+..\output\main.o: ..\lib\include\lpc17xx_ssp.h
+..\output\main.o: C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h
+..\output\main.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+..\output\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\output\main.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+..\output\main.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+..\output\main.o: C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
+..\output\main.o: ..\lib\include\lpc_types.h
+..\output\main.o: ..\lib\include\lpc17xx_libcfg.h
+..\output\main.o: ..\lib\include\lpc17xx_pinsel.h
+..\output\main.o: ..\lib\include\lpc17xx_gpio.h

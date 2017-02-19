@@ -1,0 +1,10 @@
+..\output\lpc17xx_gpio.o: ..\lib\source\lpc17xx_gpio.c
+..\output\lpc17xx_gpio.o: ..\lib\include\lpc17xx_gpio.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\CMSIS\Include\core_cm3.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\CMSIS\Include\core_cmFunc.h
+..\output\lpc17xx_gpio.o: C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h
+..\output\lpc17xx_gpio.o: ..\lib\include\lpc_types.h
+..\output\lpc17xx_gpio.o: ..\lib\include\lpc17xx_libcfg_default.h
