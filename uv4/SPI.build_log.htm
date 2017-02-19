@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\Firmware\try codes\SPI\uv4\SPI.uvproj
+Project File Date:  02/18/2017
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+Program Size: Code=1828 RO-data=236 RW-data=8 ZI-data=608  
+".\SPI.axf" - 0 Error(s), 0 Warning(s).
+</pre>
+</body>
+</html>
+c\main.c(117): warning:  #177-D: variable "i" was declared but never referenced
+        int i;
+..\src\main.c: 2 warnings, 0 errors
+compiling SPI.cpp...
+..\lib\GPIO.h(57): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\lib\SPI.h(41): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\lib\SPI.cpp(43): warning:  #1-D: last line of file ends without a newline
+  }
+..\lib\SPI.cpp(32): warning:  #177-D: variable "tmp" was declared but never referenced
+        uint32_t tmp;
+..\lib\SPI.cpp(4): warning:  #177-D: variable "LPC_SSP" was declared but never referenced
+  static LPC_SSP_TypeDef (* const LPC_SSP[2]) = { LPC_SSP0, LPC_SSP1};
+..\lib\SPI.cpp: 5 warnings, 0 errors
+compiling Systick.cpp...
+..\lib\Systick.h(29): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\lib\Systick.cpp: 1 warning, 0 errors
+compiling GPIO.cpp...
+..\lib\GPIO.h(57): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\lib\GPIO.cpp(178): warning:  #1-D: last line of file ends without a newline
+  }
+..\lib\GPIO.cpp: 2 warnings, 0 errors
+compiling ClkPwr.c...
+..\lib\ClkPwr.h(15): error:  #11-D: unrecognized preprocessing directive
+  #ifdef__cplusplus
+..\lib\ClkPwr.h(16): error:  #169: expected a declaration
+  }
+..\lib\ClkPwr.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\lib\ClkPwr.h(19): error:  #36: the #if for this directive is missing
+  #endif
+..\lib\ClkPwr.c(5): warning:  #1-D: last line of file ends without a newline
+  }
+..\lib\ClkPwr.c(5): warning: At end of source:  #12-D: parsing restarts here after previous syntax error
+..\lib\ClkPwr.c: 3 warnings, 3 errors
+".\SPI.axf" - 3 Error(s), 13 Warning(s).
+Target not created
