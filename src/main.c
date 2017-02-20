@@ -63,10 +63,10 @@ void ssp_entry(void)	{
 
 	
 	//Initizing SSP
-	SSP_ConfigStruct.Databit = SSP_DATABIT_16;
+	SSP_ConfigStruct.Databit = SSP_DATABIT_8;
 	SSP_ConfigStruct.Mode = 0;
 	SSP_ConfigStruct.FrameFormat = 0;
-	SSP_ConfigStruct.ClockRate = 125000000;
+	SSP_ConfigStruct.ClockRate = 250000000;
 	SSP_ConfigStruct.CPHA = 0;					//0
 	SSP_ConfigStruct.CPOL =0 ;						//0
 	SSP_Init(LPC_SSP0, &SSP_ConfigStruct);
@@ -81,33 +81,17 @@ void ssp_entry(void)	{
 
 	// Enable SSP peripheral
 	SSP_Cmd(LPC_SSP0, ENABLE);
-	
-	
-	
-//	SSP_SendData(LPC_SSP0, 0xFF00);
-//	_delayus(5);
-//	
-//	//Turning on Latch
-//	GPIO_SetValue(1, LE);
-//	_delayus(15);
-//	GPIO_ClearValue(1, LE);
-//	
-//	//OutputEnable
-//	GPIO_ClearValue(1, OE);
-//	_delayus(100);
-//	GPIO_SetValue(1, OE);
-//	i++;
-//	return i;
+
 }
 
-void send(uint16_t data1)	{
+void send(uint8_t data1)	{
 	
 	
 	LPC_SSP0->DR = data1;
 	while(!(LPC_SSP0->SR & (1<<2)));
 	  
 //	SSP_SendData(LPC_SSP0, data);
-	_delayus(5);
+	_delayus(1000);
 
 	//Turning on Latch
 	GPIO_SetValue(0, LE);
@@ -116,21 +100,60 @@ void send(uint16_t data1)	{
 	
 	//OutputEnable
 	GPIO_ClearValue(0, OE);
-	_delayus(100);
-	GPIO_SetValue(0, OE);
+//	_delayus(100);
+//	GPIO_SetValue(0, OE);
 }
 
 
 int main(void)	{
-	uint16_t data=0x0101;
-	uint32_t i=0;
-	ssp_entry();
-	while(1<100)	{
-//		_delayus(10000000);
-		send(data);
-		i++;
-		data=data+i;
+	int number[10] = {0xFC, 0x60, 0xDA, 0xF2, 0x66, 0xB6, 0xBE, 0xE0, 0xFE, 0xF6};
 	
+	uint8_t i=0;
+	uint8_t j=0;
+	ssp_entry();
+		
+	
+	while(1)	{
+				
+		for(i=0; i< 10; i++)	{
+			
+			for(j=0; j<10; j++)	{
+				LPC_SSP0->DR = number[i];
+				LPC_SSP0->DR = number[j];
+				
+						while(!(LPC_SSP0->SR & (1<<2)));
+	  
+//	SSP_SendData(LPC_SSP0, data);
+	_delayus(1000);
+
+	//Turning on Latch
+	GPIO_SetValue(0, LE);
+	_delayus(15);
+	GPIO_ClearValue(0, LE);
+	
+	//OutputEnable
+	GPIO_ClearValue(0, OE);
+		
+		_delayus(500000);
+				
+			}
+		}
+		
+
 	}
+	
+//	while(data<=0xFF)	{
+//		send(data);
+////		_delayus(1000000);
+//		data=data+0x01;
+//	}		
+	
+//	while(1<100)	{
+////		_delayus(10000000);
+//		send(data);
+//		i++;
+//		data=data+i;
+//	
+//	}
 }
 

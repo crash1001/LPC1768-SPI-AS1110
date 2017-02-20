@@ -1,5 +1,5 @@
 Dependencies for Project 'SSP', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_LPC17xx.s)(0x58A9B71E)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\startup_lpc17xx.lst --xref -o ..\output\startup_lpc17xx.o --depend ..\output\startup_lpc17xx.d)
+F (.\startup_LPC17xx.s)(0x58AA74AF)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx--list .\startup_lpc17xx.lst --xref -o ..\output\startup_lpc17xx.o --depend ..\output\startup_lpc17xx.d)
 F (C:\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c)(0x532C12D4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\system_lpc17xx.o --omf_browse ..\output\system_lpc17xx.crf --depend ..\output\system_lpc17xx.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
@@ -7,58 +7,58 @@ I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-F (..\src\main.c)(0x58A9D14F)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
-I (..\lib\include\lpc17xx_ssp.h)(0x4E5B40B0)
+F (..\src\main.c)(0x58AA843D)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+I (..\lib\include\lpc17xx_ssp.h)(0x58AA74AF)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_libcfg.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_pinsel.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_gpio.h)(0x4E5B40B0)
-F (..\lib\source\lpc17xx_clkpwr.c)(0x4E5B40B0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_clkpwr.o --omf_browse ..\output\lpc17xx_clkpwr.crf --depend ..\output\lpc17xx_clkpwr.d)
-I (..\lib\include\lpc17xx_clkpwr.h)(0x4E5B40B0)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_libcfg.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_pinsel.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_gpio.h)(0x58AA74AF)
+F (..\lib\source\lpc17xx_clkpwr.c)(0x58AA74AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_clkpwr.o --omf_browse ..\output\lpc17xx_clkpwr.crf --depend ..\output\lpc17xx_clkpwr.d)
+I (..\lib\include\lpc17xx_clkpwr.h)(0x58AA74AF)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
-F (..\lib\source\lpc17xx_gpio.c)(0x4E5B40B0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_gpio.o --omf_browse ..\output\lpc17xx_gpio.crf --depend ..\output\lpc17xx_gpio.d)
-I (..\lib\include\lpc17xx_gpio.h)(0x4E5B40B0)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
+F (..\lib\source\lpc17xx_gpio.c)(0x58AA74AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_gpio.o --omf_browse ..\output\lpc17xx_gpio.crf --depend ..\output\lpc17xx_gpio.d)
+I (..\lib\include\lpc17xx_gpio.h)(0x58AA74AF)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_libcfg_default.h)(0x4E5B40B0)
-F (..\lib\source\lpc17xx_libcfg_default.c)(0x4E5B40B0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_libcfg_default.o --omf_browse ..\output\lpc17xx_libcfg_default.crf --depend ..\output\lpc17xx_libcfg_default.d)
-I (..\lib\include\lpc17xx_libcfg_default.h)(0x4E5B40B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_libcfg_default.h)(0x58AA74AF)
+F (..\lib\source\lpc17xx_libcfg_default.c)(0x58AA74AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_libcfg_default.o --omf_browse ..\output\lpc17xx_libcfg_default.crf --depend ..\output\lpc17xx_libcfg_default.d)
+I (..\lib\include\lpc17xx_libcfg_default.h)(0x58AA74AF)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
-F (..\lib\source\lpc17xx_pinsel.c)(0x4E5B40B0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_pinsel.o --omf_browse ..\output\lpc17xx_pinsel.crf --depend ..\output\lpc17xx_pinsel.d)
-I (..\lib\include\lpc17xx_pinsel.h)(0x4E5B40B0)
+F (..\lib\source\lpc17xx_pinsel.c)(0x58AA74AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_pinsel.o --omf_browse ..\output\lpc17xx_pinsel.crf --depend ..\output\lpc17xx_pinsel.d)
+I (..\lib\include\lpc17xx_pinsel.h)(0x58AA74AF)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
-F (..\lib\source\lpc17xx_ssp.c)(0x58A9B960)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_ssp.o --omf_browse ..\output\lpc17xx_ssp.crf --depend ..\output\lpc17xx_ssp.d)
-I (..\lib\include\lpc17xx_ssp.h)(0x4E5B40B0)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
+F (..\lib\source\lpc17xx_ssp.c)(0x58AA74AF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\lib\include-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\NXP\LPC17xx-o ..\output\lpc17xx_ssp.o --omf_browse ..\output\lpc17xx_ssp.crf --depend ..\output\lpc17xx_ssp.d)
+I (..\lib\include\lpc17xx_ssp.h)(0x58AA74AF)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\LPC17xx.h)(0x532C13B0)
 I (C:\Keil\ARM\CMSIS\Include\core_cm3.h)(0x532C1766)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7E4F8)
 I (C:\Keil\ARM\CMSIS\Include\core_cmInstr.h)(0x532C1766)
 I (C:\Keil\ARM\CMSIS\Include\core_cmFunc.h)(0x532C1766)
 I (C:\Keil\ARM\Inc\NXP\LPC17xx\system_LPC17xx.h)(0x532C13B0)
-I (..\lib\include\lpc_types.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_clkpwr.h)(0x4E5B40B0)
-I (..\lib\include\lpc17xx_libcfg_default.h)(0x4E5B40B0)
+I (..\lib\include\lpc_types.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_clkpwr.h)(0x58AA74AF)
+I (..\lib\include\lpc17xx_libcfg_default.h)(0x58AA74AF)
