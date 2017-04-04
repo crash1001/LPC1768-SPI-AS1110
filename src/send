@@ -1,0 +1,36 @@
+const uint8_t numberOfDigits = 12;
+uint8_t buffer[numberOfDigits];
+
+void addToBuffer(int digit) {
+
+  uint8_t a = 0;
+  uint8_t num = 0;
+  //clear
+  memset(buffer, 0, sizeof(buffer));
+  
+  while(digit > 0) {
+    num = numbers[digit % 10];
+    buffer[a] = num;
+    digit = digit / 10;
+    a++;
+  }
+  writeToBuffer();
+}
+
+void writeToBuffer() {
+  int i;
+   GPIO_SetValue(0, OE);
+  GPIO_ClearValue(0, LE);
+  
+  for( i = sizeof(buffer) -1 ; a >= 0 ; a-- ) {
+    shiftOut(buffer[i]);
+  }
+  GPIO_ClearValue(0, OE);
+  GPIO_SetValue(0, LE);
+}
+
+void shiftOut(uint8_t shiftData) {
+  
+  LPC_SSP0->DR = shiftData;
+  while(!(LPC_SSP0->SR & (1<<2)));
+}
