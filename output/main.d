@@ -10,3 +10,4 @@
 ..\output\main.o: ..\lib\include\lpc17xx_libcfg.h
 ..\output\main.o: ..\lib\include\lpc17xx_pinsel.h
 ..\output\main.o: ..\lib\include\lpc17xx_gpio.h
+..\output\main.o: C:\Keil\ARM\ARMCC\bin\..\include\string.h

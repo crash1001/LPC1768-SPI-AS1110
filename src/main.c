@@ -2,23 +2,28 @@
 #include "lpc_types.h"
 #include "lpc17xx_libcfg.h"
 #include "lpc17xx_pinsel.h"
-#include <LPC17xx.h>
-//#include "debug_frmwrk.h"
+#include "LPC17xx.h"
 #include "lpc17xx_gpio.h"
+#include "string.h"
 
-
-/* Example group ----------------------------------------------------------- */
 //Variables
 volatile unsigned long SysTickCnt;
-const uint8_t BUFFER_SIZE = 16;
 volatile unsigned int i =0;
 const uint32_t LE = (1<<19);				//P0.19 as LatchEnable
 const uint32_t OE = (1<<20);				//P0.20 as OutputEnable
 
+//NUMBER MAPPING
+const uint8_t numbers[10] = {0xFC, 0x60, 0xDA, 0xF2, 0x66, 0xB6, 0xBE, 0xE0, 0xFE, 0xF6};
+const uint8_t numberOfDigits = 12;
+uint8_t buffer[numberOfDigits];
+
+
 //Functions
 void SysTick_Handler (void);
 void _delayus(unsigned long tick);
-int entry(void);
+void addToBuffer(long long int digit);
+void writeToBuffer();
+void shiftOut(uint8_t shiftData);
 
 
 
@@ -66,7 +71,7 @@ void ssp_entry(void)	{
 	SSP_ConfigStruct.Databit = SSP_DATABIT_8;
 	SSP_ConfigStruct.Mode = 0;
 	SSP_ConfigStruct.FrameFormat = 0;
-	SSP_ConfigStruct.ClockRate = 250000000;
+	SSP_ConfigStruct.ClockRate = 1000000;
 	SSP_ConfigStruct.CPHA = 0;					//0
 	SSP_ConfigStruct.CPOL =0 ;						//0
 	SSP_Init(LPC_SSP0, &SSP_ConfigStruct);
@@ -84,76 +89,67 @@ void ssp_entry(void)	{
 
 }
 
-void send(uint8_t data1)	{
+void addToBuffer(long long digit) {
+	uint8_t i =0;
+	uint8_t num =0;
 	
+	//clear  buffer
+	memset(buffer, 0 , sizeof(buffer));
 	
-	LPC_SSP0->DR = data1;
-	while(!(LPC_SSP0->SR & (1<<2)));
-	  
-//	SSP_SendData(LPC_SSP0, data);
-	_delayus(1000);
+	while(digit > 0 ) {
+		num = numbers[digit % 10];
+		buffer[i] = num;
+		digit = digit / 10;
+		i++;
+	}
+	writeToBuffer();	
+}
 
-	//Turning on Latch
-	GPIO_SetValue(0, LE);
-	_delayus(15);
-	GPIO_ClearValue(0, LE);
-	
-	//OutputEnable
-	GPIO_ClearValue(0, OE);
-//	_delayus(100);
+void writeToBuffer() {
+	int i=0;
 //	GPIO_SetValue(0, OE);
+	
+	
+	for (i = sizeof(buffer)-1; i>=0 ; i--) {
+		_delayus(20);
+		shiftOut(buffer[i]);
+	}
+	//Turning on Latch
+	_delayus(10);
+	GPIO_SetValue(0, LE);
+	_delayus(60);
+	GPIO_ClearValue(0, LE);
+		//OutputEnable
+//	_delayus(10);
+	GPIO_ClearValue(0, OE);
+	
+
+	
+}
+void shiftOut(uint8_t shiftData) {
+//	GPIO_SetValue(0, OE);
+//	_delayus(1000);
+	LPC_SSP0->DR = shiftData;
+//	LPC_SSP0->DR = shiftData;
+	while(!(LPC_SSP0->SR & (1<<2)));
+	
 }
 
 
+
 int main(void)	{
-	int number[10] = {0xFC, 0x60, 0xDA, 0xF2, 0x66, 0xB6, 0xBE, 0xE0, 0xFE, 0xF6};
-	
-	uint8_t i=0;
-	uint8_t j=0;
+	int i=0;
 	ssp_entry();
 		
 	
 	while(1)	{
-				
-		for(i=0; i< 10; i++)	{
-			
-			for(j=0; j<10; j++)	{
-				LPC_SSP0->DR = number[i];
-				LPC_SSP0->DR = number[j];
-				
-						while(!(LPC_SSP0->SR & (1<<2)));
-	  
-//	SSP_SendData(LPC_SSP0, data);
-	_delayus(1000);
+//	addToBuffer(i);
+//		i=i+99999;
+//		
+addToBuffer(i);
+		_delayus(1000);
+		i++;
 
-	//Turning on Latch
-	GPIO_SetValue(0, LE);
-	_delayus(15);
-	GPIO_ClearValue(0, LE);
-	
-	//OutputEnable
-	GPIO_ClearValue(0, OE);
-		
-		_delayus(500000);
-				
-			}
-		}
-		
 
 	}
-	
-//	while(data<=0xFF)	{
-//		send(data);
-////		_delayus(1000000);
-//		data=data+0x01;
-//	}		
-	
-//	while(1<100)	{
-////		_delayus(10000000);
-//		send(data);
-//		i++;
-//		data=data+i;
-//	
-//	}
 }
-
